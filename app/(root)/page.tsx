@@ -5,8 +5,6 @@ import '@/assets/styles/globals.css';
 
 export default function page() {
   return (
-    <Button variant="default">
-      Button
-    </Button>
+   <></>
   )
 }
