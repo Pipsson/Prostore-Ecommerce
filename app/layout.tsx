@@ -1,15 +1,12 @@
-import type { Metadata } from "next";
-import {Inter} from "next/font/google";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import '@/assets/styles/globals.css';
 
-
-const inter = Inter({
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Prostore",
-  description: "Modern e-commerce platform built with Next.js and Tailwind CSS",
+  title: 'Prostore',
+  description: 'A modern store built with Next.js',
 };
 
 export default function RootLayout({
@@ -18,12 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.className}  antialiased`}
-      >
-        {children}
-      </body>
+    <html lang='en' suppressHydrationWarning>
+      <body className={`${inter.className}`}>{children}</body>
     </html>
   );
 }
