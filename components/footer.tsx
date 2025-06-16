@@ -1,5 +1,4 @@
 import { APP_NAME } from "@/lib/constants";
-import { Aperture } from "lucide-react";
 
 
 const Footer = () => {

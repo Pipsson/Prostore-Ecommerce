@@ -5,6 +5,6 @@ import '@/assets/styles/globals.css';
 
 export default function page() {
   return (
-   <></>
+   <>Prostore</>
   )
 }
