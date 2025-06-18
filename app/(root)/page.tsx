@@ -1,10 +1,8 @@
-import { Button } from '@/components/ui/button'
-import React from 'react'
-import '@/assets/styles/globals.css';
+import React from 'react';
 
 
-export default function page() {
-  return (
-   <>Prostore</>
-  )
-}
+const Homepage =  () => {
+  return <>Prostore</>;
+};
+
+export default Homepage;
