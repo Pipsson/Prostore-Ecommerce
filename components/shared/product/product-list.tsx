@@ -1,4 +1,5 @@
 import React from "react";
+import ProductCard from "./product-card";
 
 // below component takes some of data and a title as props
 // So we should destructure the props
@@ -17,12 +18,11 @@ const ProductList = ({ data, title, limit }: { data: any; title?: string ; limit
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {limitedData.map((product : any) => (
                 <div key={product.id} className="border p-4 rounded-lg">
-                    <h3 className="text-lg font-semibold">{product.name}</h3>
-                    <p className="text-gray-600">{product.description}</p>
-                    <p className="text-xl font-bold">${product.price}</p>
+                    <ProductCard  product={product} key={product.slug}/>
+                   
                 </div>
                 ))}
-            </div>
+            </div>                                                                                                    
         )
          : (
             <div>
