@@ -3,8 +3,9 @@
 import { PrismaClient } from "../generated/prisma";
 import { convertToPlainObject } from "../utils";
 import { LATEST_PRODUCTS_LIMIT } from "../constants";
+import { Product } from "@/types";
 
-export async function getLatestProducts() {
+export async function getLatestProducts(): Promise<Product[]> {
   const prisma = new PrismaClient();
   const data = await prisma.product.findMany({
     take: LATEST_PRODUCTS_LIMIT,
@@ -13,7 +14,7 @@ export async function getLatestProducts() {
     },
   });
 
-  return convertToPlainObject(data);
+  return convertToPlainObject(data) as unknown as Product[];
 }
 
 // get product by slug

@@ -1,0 +1,15 @@
+# Generated Prisma files
+lib/generated/
+node_modules/
+.next/
+out/
+dist/
+build/
+
+# Generated files
+*.generated.*
+*.min.js
+*.bundle.js
+
+# Dependencies
+node_modules/**/* 

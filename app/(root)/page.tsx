@@ -8,7 +8,6 @@ const Homepage =  async () => {
   data={ latestProducts}
   title='Newest Arrivals'
 
-
   />
       </>
 };
