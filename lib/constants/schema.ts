@@ -17,3 +17,19 @@ export const insertProductSchema = z.object({
     price :currency,
 
 })
+
+
+// schemas for signing users
+
+export const signInSchema = z.object({
+    email : z.string().email('Invalid email address'),
+    password : z.string().min(8, 'Password must be at least 8 characters long'),
+})
+
+
+// sign up schema
+export const signUpSchema = z.object({
+    name : z.string().min(3, 'Name must be at least 3 characters long'),
+    email : z.string().email('Invalid email address'),
+    password : z.string().min(8, 'Password must be at least 8 characters long'),
+})
